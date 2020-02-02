@@ -24,7 +24,12 @@ public class Activador : MonoBehaviour
         {
             if (ob.GetComponent<EstadoObjeto>() != null) ob.GetComponent<EstadoObjeto>().Activado = true;
             if (ob.GetComponent<Animator>() != null) ob.GetComponent<Animator>().SetBool("Activar",true);
+            if (ob.GetComponent<SecuenciaEscenas>() != null)
+            {
+                ob.GetComponent<SecuenciaEscenas>().escenas[ob.GetComponent<SecuenciaEscenas>().cont].GetComponent<Animator>().SetBool("Activar", true);
+                //ob.GetComponent<SecuenciaEscenas>().cont++;
+            }
         }
-
+        //if (gameObject.GetComponent<EstadoObjeto>()) gameObject.GetComponent<EstadoObjeto>().Activado = false;
     }
 }
