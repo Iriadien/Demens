@@ -10,10 +10,13 @@ public class EstadoObjeto : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("colli");
         if (activador != null && activador.gameObject == collision.gameObject)
         {
-            Debug.Log("activar");
+            Activado = true;
+        }
+
+        if (activadorAscensor != null && activadorAscensor.gameObject == collision.gameObject)
+        {
             Activado = true;
         }
     }
@@ -21,6 +24,11 @@ public class EstadoObjeto : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (activador != null && activador.gameObject == collision.gameObject)
+        {
+            Activado = false;
+        }
+
+        if (activadorAscensor != null && activadorAscensor.gameObject == collision.gameObject)
         {
             Activado = false;
         }

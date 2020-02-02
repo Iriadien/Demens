@@ -20,7 +20,11 @@ public class Activador : MonoBehaviour
     void Update()
     {
         if (!eo.Activado) return;
-        Debug.Log("cosas");
+        foreach (GameObject ob in objetosParaActivar)
+        {
+            if (ob.GetComponent<EstadoObjeto>() != null) ob.GetComponent<EstadoObjeto>().Activado = true;
+            if (ob.GetComponent<Animator>() != null) ob.GetComponent<Animator>().SetBool("Activar",true);
+        }
 
     }
 }
