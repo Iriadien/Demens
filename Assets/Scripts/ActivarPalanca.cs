@@ -14,16 +14,13 @@ public class ActivarPalanca : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && !cooldown)
         {
-            //Debug.Log("uses");
             animator.SetBool("Use", true);
             cooldown = true;
-            
-            //StartCoroutine(Wait(duration));
         }
 
         if (cooldown)
         {
-            time += Time.deltaTime;Debug.Log(time);
+            time += Time.deltaTime;
             if (time >= duration)
             {
                 cooldown = false;
@@ -31,12 +28,5 @@ public class ActivarPalanca : MonoBehaviour
                 time = 0;
             }
         }
-    }
-
-    IEnumerator Wait (float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        animator.SetBool("Use", false);
-        cooldown = false;
     }
 }
