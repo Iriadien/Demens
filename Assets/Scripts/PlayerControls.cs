@@ -13,7 +13,7 @@ public class PlayerControls : MonoBehaviour
 
     private SpriteRenderer spriteRenderer2D;
 
-    private bool isLookingRight = true;
+    //private bool isLookingRight = true;
 
     private void Awake()
     {
