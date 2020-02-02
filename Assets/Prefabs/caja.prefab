@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3609875777543510805}
   - component: {fileID: 3609875777543510802}
   - component: {fileID: 7036173}
+  - component: {fileID: 5134440460342708640}
   m_Layer: 0
   m_Name: caja
   m_TagString: Pusheable
@@ -145,3 +146,18 @@ MonoBehaviour:
   freezeX: 1
   freezeY: 1
   freezeZ: 1
+--- !u!114 &5134440460342708640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609875777543510806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6418c186e60d295418b1ce97e97d0225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activador: {fileID: 0}
+  activadorAscensor: {fileID: 0}
+  Activado: 0
